@@ -5,11 +5,13 @@ int fact (int n) {
         return(1);
     }
     else {
-        return (n*fact(n-1));
+        return n*fact(n-1);
     }
 }
 int main () {
-    int m=3;
-    cout<<"Factorial: "<<fact(m)<<endl;
+    int m;
+    cout<<"Ingresa m: ";
+    cin>>m;
+    cout<<"\nFactorial: "<<fact(m)<<endl;
     return 0;
 }
