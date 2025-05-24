@@ -1,4 +1,4 @@
-#include <iostream>
+C:\ENTRENAMIENTO#include <iostream>
 using namespace std;
 //prototipo de obtener mayor //con int en vez de void
 void buscaMayor (int a, int b) {

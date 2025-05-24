@@ -3,7 +3,8 @@ project(Mode5)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(slot1_0 slot1_0.cpp)
-add_executable(slot1_1 slot1_1.cpp)
-add_executable(slot1_2 slot1_2.cpp)
-add_executable(slot1_3 slot1_3.cpp)
+add_executable(slot1.0 slot1.0.cpp)
+add_executable(slot1.1 slot1.1.cpp)
+add_executable(slot1.2 slot1.2.cpp)
+add_executable(slot1.3 slot1.3.cpp)
+add_executable(slot1.4 slot1.4.cpp)
