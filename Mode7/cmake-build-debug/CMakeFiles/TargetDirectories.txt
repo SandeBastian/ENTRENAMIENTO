@@ -1,0 +1,3 @@
+C:/ENTRENAMIENTO/Mode7/cmake-build-debug/CMakeFiles/slot1_0.dir
+C:/ENTRENAMIENTO/Mode7/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/ENTRENAMIENTO/Mode7/cmake-build-debug/CMakeFiles/rebuild_cache.dir
