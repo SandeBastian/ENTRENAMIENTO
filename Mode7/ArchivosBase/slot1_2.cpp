@@ -1,12 +1,14 @@
 #include <iostream>
 #include <fstream>
 using namespace std;
-typedef char cadena[51];
+typedef char Cadena[101];
 int main () {
-    int cod, n=2;
-    cadena name;
+    int n, cod;
+    Cadena name;
+    cout << "Ingrese el nro de elementos: ";
+    cin>>n;
     ofstream sal;
-    sal.open("datos1.txt");
+    sal.open("Datos1.txt");
     if(!sal) {
         cout<<"Error de apertura..."<<endl;
     }else {
