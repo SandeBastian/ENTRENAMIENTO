@@ -6,22 +6,22 @@ using namespace std;
 typedef char Cadena[101];
 int main(){
     int cod;
-    Cadena name;
+    Cadena nomb;
     //Crear la variable de flujo de entrada (archivo de lectura)
-    ifstream ent;
+    ifstream Archivo;
     //Abrir el archivo para lectura
-    ent.open("Datos1.txt");
-    if(!ent){
+    Archivo.open("Datos1.txt");
+    if(!Archivo){
         cout<<"Error de apertura para lectura...";
     }
     else{
         //while(ent){
-        while(!ent.eof()){
-            if(ent>>cod>>name){
-                cout<<cod<<"\t"<<name<<endl;
+        while(!Archivo.eof()){
+            if(Archivo>>cod>>nomb){
+                cout<<cod<<"\t"<<nomb<<endl;
             }
         }
-        ent.close();
+        Archivo.close();
     }
     return 0;
 }

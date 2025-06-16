@@ -8,20 +8,20 @@ int main(){
     int cod;
     Cadena name;
     //Crear la variable de flujo de entrada (archivo de lectura)
-    ifstream ent;
+    ifstream Archivo;
     //Abrir el archivo para lectura
-    ent.open("Datos1.txt");
-    if(!ent){
+    Archivo.open("Datos1.txt");
+    if(!Archivo){
         cout<<"Error de apertura para lectura...";
     }
     else{
-        //while(!ent.eof()){
-        while(ent){
-            if(ent>>cod>>name){
+        //while(!Archivo.eof()){
+        while(Archivo){
+            if(Archivo>>cod>>name){
                 cout<<cod<<"\t"<<name<<endl;
             }
         }
-        ent.close();
+        Archivo.close();
     }
     return 0;
 }
