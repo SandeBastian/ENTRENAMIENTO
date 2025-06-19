@@ -1,3 +1,4 @@
+/*APERTURA DE BINARIO SELECCIONANDO LO QUE QUEREMOS LEER*/
 #include <iostream>
 #include <fstream>
 using namespace std;

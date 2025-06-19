@@ -1,5 +1,5 @@
-/*Leer un archivo de datos llamado INDICE.DAT y aumentar en 1 los valores numericos
-almacenados en el archivo.*/
+/*LEER UN ARCHIVO  zlot.dat Y AUMENTAR EN 1 LOS VALORES NUMERICOS
+ALMACENADOS EN EL ARCHIVO*/
 #include <iostream>
 #include <fstream>
 using namespace std;

@@ -1,5 +1,5 @@
-/*Leer un archivo de datos llamado INDICE.DAT y aumentar en 1 los valores numericos
-almacenados en el archivo.*/
+/*LEER UN ARCHIVO DE DATOS llamado INDICE.DAT y DISMINUIR EN 1 LOS VALORES NUMERICOS
+ALMACENADOS EN EL ARCHIVO.*/
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -27,7 +27,7 @@ int main(){
             //Nos ubicamos en la posicion del registro a leer
             BinarioLect.seekg(i*sizeof(indiceLect));
             if(BinarioLect.read((char*)&indiceLect, sizeof(indiceLect))){
-                indiceLect=indiceLect+1;
+                indiceLect=indiceLect-1; //-----------------------
 
                 //ubicarnos en la posicion del registro para escribir
                 BinarioLect.seekp(i*sizeof(indiceLect));

@@ -1,5 +1,5 @@
-/* Codigo que genera un archivo binario, su manera de crearlo necesito
-:: Bynari en su llamado tambien creo, el codigo a continuacion*/
+/* CODIGO QUE GENERA UN ARCHIVO BINARIO, SU MANERA DE CREARLO NECESITA
+"::binary" Y EN SU LLAMADO TAMBIEN CREO, EL CODIGO A CONTINUANCION*/
 #include <iostream>
 #include <fstream>
 using namespace std;

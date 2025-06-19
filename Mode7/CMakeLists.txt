@@ -15,3 +15,6 @@ add_executable(slot4_1 BinarioBase/slot4_1.cpp)
 add_executable(slot4_1_0 BinarioBase/slot4_1_0.cpp)
 add_executable(slot4_1_1 BinarioBase/slot4_1_1.cpp)
 add_executable(slot4_1_2 BinarioBase/slot4_1_2.cpp)
+
+add_executable(ejercicioA1_0 EjerciciosAudanteA/ejercicioA1_0.cpp)
+add_executable(ejercicioA2_0 EjerciciosAudanteA/ejercicioA2_0.cpp)
