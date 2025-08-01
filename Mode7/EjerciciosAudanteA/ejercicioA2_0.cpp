@@ -1,12 +1,14 @@
-/**
+/*
 sin emplear la funcion eof()
-Leer el archivo de texto llamado "DATOS.TXT" (que ya existe), que
+Leer el archivo de texto llamado "NotasA.txt" (que ya existe), que
 contiene la siguiente información:
+
 Codigo Nombre Completo PC1 PC2 PC3
 100 TORRES-ALVA-JUAN 11 08 10
 200 CAMPOS-RUIZ-JOSE 08 09 11
 300 LOPEZ-QUISPE-ANA 11 13 10
 */
+//Leer archivos con guiones
 #include <iostream>
 #include <fstream>
 using namespace std;

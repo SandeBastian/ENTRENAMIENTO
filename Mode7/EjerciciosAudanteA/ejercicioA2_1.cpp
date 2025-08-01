@@ -7,6 +7,7 @@ Codigo Nombre Completo PC1 PC2 PC3
 200	CAMPOS RUIZ JOSE	8	9	11
 300	LOPEZ QUISPE ANA	11	13	10
 */
+//Leer Archivos (Cadena con guiones)
 #include <iostream>
 #include <fstream>
 using namespace std;

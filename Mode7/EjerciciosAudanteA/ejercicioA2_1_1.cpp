@@ -2,10 +2,12 @@
 Del archivo de texto llamado "DATOS.TXT" (que ya existe), que
 contine
 la siguiente información:
+
 Codigo Nombre Completo PC1 PC2 PC3
 100 TORRES-ALVA-JUAN 11 08 10
 200 CAMPOS-RUIZ-JOSE 08 09 11
 300 LOPEZ-QUISPE-ANA 11 13 10
+
 Se pide mostrar con cada uno, el Código, nombre completo y promedio
 de práctica, eliminando la más baja.
 */
