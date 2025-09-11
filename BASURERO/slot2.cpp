@@ -1,4 +1,4 @@
-//Determinar el mayor valor de 3 numeros
+//Tarea 2: Determinar el mayor valor de 3 numeros
 #include <iostream>
 using namespace std;
 int main() {

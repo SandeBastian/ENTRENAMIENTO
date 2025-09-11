@@ -1,6 +1,5 @@
-//
-// Created by El_Regente on 27/08/2025.
-//
+/*Tarea 4: mayor valor par y menor valor impar de n numeros enteros
+ */
 #include <iostream>
 using namespace std;
 int main() {

@@ -1,4 +1,5 @@
-//Determinar el mayor valor de 3 numeros
+/*Tarea 3: Elaborar un algoritmo que reciba 6 números enteros y determine el valor máximo
+ */
 #include <iostream>
 using namespace std;
 int main() {
