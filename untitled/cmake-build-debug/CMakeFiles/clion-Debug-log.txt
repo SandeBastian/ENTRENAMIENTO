@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\El_Regente\Documents\TRAINING\C++\ENTRENAMIENTO\untitled Select CMakeLists.txt
