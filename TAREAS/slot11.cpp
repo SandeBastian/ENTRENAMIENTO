@@ -1,4 +1,5 @@
-/*Tarea 11: Algoritmo para insertar una nota en un arreglo de notas ordenado de menor a mayor
+/*Tarea 11: Algoritmo para insertar una nota en un arreglo de notas (notas que ya esta ordenadas =D )
+ordenado de menor a mayor
 */
 #include <iostream>
 using namespace std;
