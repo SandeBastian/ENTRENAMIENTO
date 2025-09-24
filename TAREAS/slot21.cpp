@@ -1,10 +1,8 @@
 /*
-Tarea 23: Algoritmo para hallar ventas máximas y mínimas de un tienda comercial de instrumentos musicales
-Una empresa comercializadora de instrumentos musicales tiene las ventas mensuales en dinero, por cada tipo de
-instrumentos que vende (Cuerda, Viento, Percusión y electrónicos) y cada una de las 5 tiendas con las que opera.
-Desarrollar un algoritmo que determine cuál fue el mes y tienda en que ocurrio la mayor venta total y cuál fue
-la línea de instrumentos ytienda que tuvo la menor venta anual. Utilice un arreglo tridimensional, tomando la
-sugerencia dada en clase y que figura en el material.
+Tarea 22: Una empresa comercializadora de instrumentos musicales tiene las ventas mensuales en dinero,
+por cada tipo de instrumentos que vende (Cuerda, Viento, Percusión y Electrónicos). Desarrollar un
+algoritmo que determine cuál fue el mes en que ocurrió la mayor venta total y cuál fue la línea de
+instrumentos que tuvo la menor venta anual
 */
 #include <iostream>
 #include <time.h>
