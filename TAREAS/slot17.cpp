@@ -35,11 +35,30 @@ int main() {
 
     int inicio = 0;
     int fin = n-1;
+    int pos=0;
     bool esta = false;
+    int cont=0;
     while (!esta && inicio<=fin) {
-        
+        int medio = (inicio + fin)/2;
+        if (val==num[medio]) {
+            esta = true;
+            pos = medio;
+        }else {
+            if (val<num[medio]) {
+                fin=medio-1;
+            }else {
+                inicio=medio+1;
+            }
+        }
+        cont++;
     }
-
-
+    cout<<"Num = { ";
+    for (int i=0;i<n;i++) {
+        cout<<num[i]<<" ";
+    }
+    cout<<"}"<<endl;
+    if (esta) cout<<val<<" esta en la posicion "<<pos<<endl;
+    else cout<<val<<" no esta en la posicion "<<pos<<endl;
+    cout<<"Numero de Busquedas: "<<cont<<endl;
     return 0;
 }
