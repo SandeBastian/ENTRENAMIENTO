@@ -1,61 +1,87 @@
-/*
-Tarea 23: Una empresa comercializadora de instrumentos musicales tiene las ventas mensuales en dinero, por
-cada tipo de instrumentos que vende (Cuerda, Viento, Percusión y electrónicos) y cada una de las 5
-tiendas con las que opera. Desarrollar un algoritmo que determine cuál fue el mes y tienda en que
-ocurrio la mayor venta total y cuál fue la línea de instrumentos y tienda que tuvo la menor venta anual.
-*/
 #include <iostream>
-#include <time.h>
-#include <stdlib.h>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
+
 int main() {
-    int i, j, k;
-    float ventas[5][13][6], max, min;
-    for (j=1;j<13;j++) {
-        ventas[0][j]=0;
-    }
-    for (i=1;i<5;i++) {
-        ventas[i][0]=0;
-    }
-    for (i=1;i<5;i++) {
-        for (j=1;j<13;j++) {
-            ventas[i][j]=10000+rand()%90000;
-            ventas[0][j]=ventas[0][j]+ventas[i][j];
-            ventas[i][0]=ventas[i][0]+ventas[i][j];
-        }
-    }
-    max=ventas[0][1];
-    for (j=2;j<13;j++) {
-        if (ventas[0][j]>max) {
-            max=ventas[0][j];
+    srand(time(NULL));
+
+    float ventas[5][13][6];
+
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 13; j++) {
+            for (int k = 0; k < 6; k++) {
+                ventas[i][j][k] = 0;
+            }
         }
     }
 
-    //impresion
-    ventas[0][0]=100001;
-    for (i=0;i<5;i++) {
-        for (j=0;j<13;j++) {
-            cout<<ventas[i][j]<<"\t";
-        }
-        cout<<endl;
-    }
-    cout<<"\nMeses con mayores ventas: ";
-    for (j=1;j<13;j++) {
-        if (ventas[0][j]==max) {
-            cout<<j<<" ";
-        }
-    }
-    min=ventas[1][0];
-    for (i=2;i<5;i++) {
-        if (ventas[i][0]<min) {
-            min=ventas[i][0];
+    // Marcar la esquina [0][0][0]
+    ventas[0][0][0] = 1;
+
+    // Llenar con datos aleatorios y acumular
+    for (int i = 1; i < 5; i++) {
+        for (int j = 1; j < 13; j++) {
+            for (int k = 1; k < 6; k++) {
+                ventas[i][j][k] = 1000 + rand() % 1001;
+                ventas[0][j][k] += ventas[i][j][k];
+                ventas[i][0][k] += ventas[i][j][k];
+            }
         }
     }
-    cout<<"\nTipo de instrumento con menor venta anual: ";
-    for (i=1;i<5;i++) {
-        if (ventas[i][0]==min) {
-            cout<<i<<" ";
+
+    // Buscar mayor venta total
+    float maxVenta = 0;
+    int maxMes = 1, maxTienda = 1;
+    for (int j = 1; j < 13; j++) {
+        for (int k = 1; k < 6; k++) {
+            float totalMesTienda = 0;
+            for (int i = 1; i < 5; i++) {
+                totalMesTienda += ventas[i][j][k];
+            }
+            if (totalMesTienda > maxVenta) {
+                maxVenta = totalMesTienda;
+                maxMes = j;
+                maxTienda = k;
+            }
         }
     }
+
+    // Buscar menor venta anual
+    float minVenta = ventas[1][1][1] * 12;
+    int minInstrumento = 1, minTienda = 1;
+    for (int i = 1; i < 5; i++) {
+        for (int k = 1; k < 6; k++) {
+            float totalAnual = 0;
+            for (int j = 1; j < 13; j++) {
+                totalAnual += ventas[i][j][k];
+            }
+            if (totalAnual < minVenta) {
+                minVenta = totalAnual;
+                minInstrumento = i;
+                minTienda = k;
+            }
+        }
+    }
+
+    // Impresión
+
+    for (int k = 1; k < 6; k++) {
+        cout << "Matriz de la Tienda " << k << endl;
+
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 13; j++) {
+                cout << ventas[i][j][k] << "\t";
+            }
+            cout << endl;
+        }
+    }
+
+    cout << "\n>> Mes con mayor venta total: Mes " << maxMes << " en la Tienda " << maxTienda<< " con " << maxVenta << endl;
+
+    cout << ">> Instrumento con menor venta anual: Instrumento " << minInstrumento
+         << " en la Tienda " << minTienda
+         << " con " << minVenta << endl;
+
     return 0;
 }

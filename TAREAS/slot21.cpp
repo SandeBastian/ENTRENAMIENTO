@@ -6,7 +6,6 @@ instrumentos que tuvo la menor venta anual
 */
 #include <iostream>
 #include <time.h>
-#include <stdlib.h>
 using namespace std;
 int main() {
     int i, j;
@@ -39,6 +38,7 @@ int main() {
         }
         cout<<endl;
     }
+
     cout<<"\nMeses con mayores ventas: ";
     for (j=1;j<13;j++) {
         if (ventas[0][j]==max) {
