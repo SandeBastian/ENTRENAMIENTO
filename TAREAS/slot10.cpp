@@ -1,29 +1,26 @@
-/*Tarea 10: Algoritmo que lee un número entero positivo y determina cuantos dígitos diferentes
- tiene y cuantas veces ocurre cada dígito diferente
+/*Tarea 9: Algoritmo para leer n notas y
+ determinar cuantas veces ocurre cada nota
  */
 #include <iostream>
 using namespace std;
 int main() {
-    int n, r, cant=0, i;
+    int n, nota, cant=0;
     do {
-        cout<<"Ingrese un numero entero positivo: ";
+        cout<<"Ingrese n: ";
         cin>>n;
     }while (n<0);
-    int cont[10]={};
-    while (n>0) {
-        r=n%10;
-        n=n/10;
-        cont[r]++;
+    int cont[21]={0};
+    for (int i=0;i<n;i++) {
+        do {
+            cout<<"Numero ["<<i+1<<"]: ";
+            cin>>nota;
+        }while (nota<0||nota>20);
+        cont[nota]++;
     }
-    for (i = 0; i < 10; i++) {
+    cout<<"Conteo de notas: "<<endl;
+    for (int i=0;i<=20;i++) {
         if (cont[i]>0) {
-            cant++;
-        }
-    }
-    cout<<"El numero tiene "<<cant<<" digito/s diferente/s"<<endl;
-    for (i = 0; i < 10; i++) {
-        if (cont[i]>0) {
-            cout<<i<<" aparece "<<cont[i]<<" vez/veces"<<endl;
+            cout<<i<<" ocurre "<< cont[i]<<" vez/veces"<<endl;
         }
     }
     return 0;

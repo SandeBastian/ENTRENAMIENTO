@@ -1,38 +1,30 @@
-/*Tarea 11: Algoritmo para insertar una nota en un arreglo de notas (notas que ya esta ordenadas =D )
-ordenado de menor a mayor
-*/
+/*Tarea 10: Algoritmo que lee un número entero positivo y determina cuantos dígitos diferentes
+ tiene y cuantas veces ocurre cada dígito diferente
+ */
 #include <iostream>
 using namespace std;
 int main() {
-    int n;
-    cout << "Ingrese cantidad de notas: ";
-    cin >> n;
-    int nota[100];
-    cout << "Ingrese "<< n <<" notas (de menor a mayor):"<<endl;
-    for (int i = 0; i < n; i++) {
-        cout<<"Ingrese Nota["<<i+1<<"]: ";
-        cin >> nota[i];
+    int n, r, cant=0, i;
+    do {
+        cout<<"Ingrese un numero entero positivo: ";
+        cin>>n;
+    }while (n<0);
+    int cont[10]={};
+    while (n>0) {
+        r=n%10;
+        n=n/10;
+        cont[r]++;
     }
-    int newNum;
-    cout << "Ingrese la nueva nota: ";
-    cin >> newNum;
-    int pos = n;
-    for (int i = 0; i < n; i++) {
-        if (newNum < nota[i]) {
-            pos = i;
-            break;
+    for (i = 0; i < 10; i++) {
+        if (cont[i]>0) {
+            cant++;
         }
     }
-    for (int i = n; i > pos; i--) {
-        nota[i] = nota[i - 1];
+    cout<<"El numero tiene "<<cant<<" digito/s diferente/s"<<endl;
+    for (i = 0; i < 10; i++) {
+        if (cont[i]>0) {
+            cout<<i<<" aparece "<<cont[i]<<" vez/veces"<<endl;
+        }
     }
-    nota[pos] = newNum;
-    n++;
-
-    cout << "Notas: {";
-    for (int i = 0; i < n; i++) {
-        cout <<" "<< nota[i] << " ";
-    }
-    cout<<"}"<<endl;
     return 0;
 }
