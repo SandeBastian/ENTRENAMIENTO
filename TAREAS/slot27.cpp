@@ -1,3 +1,7 @@
+/*
+Tarea 27: Algoritmo para determinar cuantas palabras de una
+oración tienen una longitud dada
+*/
 #include <iostream>
 using namespace std;
 
