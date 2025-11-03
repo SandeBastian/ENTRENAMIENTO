@@ -35,7 +35,7 @@ int main () {
     for (int i=0;i<n;i++) {
         for (int j=0;j<n;j++) {
             cout<<mat[i][j]<<" ";
-            if (j==n-1) cout<<endl;
+            if (j==n-1) cout<<endl; //linea inutil, ese endl podria ir fuerea del segundo bucle sin condicion
         }
     }
     if (simetrica) cout<<"\nLa matriz M "<<n<<"x"<<n<<" es simetrica."<<endl;

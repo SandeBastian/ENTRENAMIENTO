@@ -3,7 +3,11 @@ project(BASURERO)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(main main.cpp)
+add_executable(main1 main1.cpp)
+add_executable(main2 main2.cpp)
+add_executable(main3 main3.cpp)
+add_executable(main4 main4.cpp)
+
 add_executable(slot1 slot1.cpp)
 add_executable(slot2 slot2.cpp)
 add_executable(slot3 slot3.cpp)
