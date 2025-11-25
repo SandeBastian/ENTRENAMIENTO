@@ -8,8 +8,10 @@ int main(){
       reg_nodo *psigue;
    } *pinicio, *pactual, *pante, *paux;
    pinicio = NULL;
+
+   ifstream a("Datos.txt");
    int x[5]={10, 20, 30, 40, 50}, i=0;
-   while (i<5) {
+   while (!a.eof()) {
       if (pinicio == NULL) {
          pinicio = new reg_nodo;
          pactual = pinicio;
